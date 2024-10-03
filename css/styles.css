@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
@@ -6,8 +7,76 @@ body {
 
 h1 {
     text-align: center;
+    margin-bottom: 20px;
 }
 
+/* Controls Container */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.controls > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Search Bar */
+.search-bar {
+    flex: 1 1 300px;
+}
+
+#search-input {
+    width: 60%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#search-button, #clear-search-button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#search-button:hover, #clear-search-button:hover {
+    background-color: #0056b3;
+}
+
+#clear-search-button {
+    background-color: #6c757d;
+}
+
+#clear-search-button:hover {
+    background-color: #5a6268;
+}
+
+/* Filters */
+.filters label, .sorting label {
+    font-weight: bold;
+}
+
+.filters select, .sorting select {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Sorting */
+.sorting {
+    flex: 1 1 200px;
+}
+
+/* Movie Grid */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -21,28 +90,54 @@ h1 {
     border: 1px solid #ddd;
     border-radius: 5px;
     text-align: center;
+    transition: transform 0.2s;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
 }
 
 .grid-item img {
     max-width: 100%;
     height: auto;
     cursor: pointer;
+    border-radius: 5px;
 }
 
+.grid-item p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Pagination */
 .pagination {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 20px 0;
+    padding: 10px 0;
+    background-color: white;
+    border-top: 1px solid #ddd;
+    position: sticky;
+    bottom: 0;
+    z-index: 1000;
 }
 
 .pagination button {
     margin: 0 5px;
-    padding: 10px 15px;
+    padding: 8px 12px;
     border: none;
     background-color: #007BFF;
     color: #fff;
     cursor: pointer;
     border-radius: 3px;
+    transition: background-color 0.3s;
+    min-width: 80px; /* Increased width for better visibility */
+}
+
+.pagination button:hover:not(.disabled):not(.active) {
+    background-color: #0056b3;
 }
 
 .pagination button.disabled {
@@ -52,4 +147,46 @@ h1 {
 
 .pagination button.active {
     background-color: #0056b3;
+    font-weight: bold;
+}
+
+.pagination .page-info {
+    margin: 0 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Loading Indicator */
+.loading {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    display: none; /* Hidden by default */
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar, .filters, .sorting {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    #search-input {
+        width: 100%;
+    }
+
+    .pagination button {
+        padding: 6px 10px;
+        min-width: 60px;
+    }
+
+    .pagination .page-info {
+        font-size: 14px;
+    }
 }

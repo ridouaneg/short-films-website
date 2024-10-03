@@ -9,7 +9,7 @@ if (!movieId) {
     fetch('data/movies.json')
         .then(response => response.json())
         .then(data => {
-            const movie = data.find(m => m.id === parseInt(movieId));
+            const movie = data.find(m => m.id === movieId);
             if (movie) {
                 populateMovieDetails(movie);
             } else {
@@ -27,7 +27,7 @@ function populateMovieDetails(movie) {
     const iframe = document.createElement('iframe');
     iframe.width = "560";
     iframe.height = "315";
-    iframe.src = `https://www.youtube.com/embed/${extractYouTubeID(movie.youtube_url)}`;
+    iframe.src = `https://www.youtube.com/embed/${movie.id}`;
     iframe.title = movie.title;
     iframe.frameBorder = "0";
     iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
@@ -35,11 +35,13 @@ function populateMovieDetails(movie) {
     videoContainer.appendChild(iframe);
 
     // Populate details
-    document.getElementById('director').textContent = movie.director;
-    document.getElementById('actors').textContent = movie.actors.replace(/\|/g, ', ');
+    // document.getElementById('director').textContent = movie.director;
+    // document.getElementById('actors').textContent = movie.actors.replace(/\|/g, ', ');
+    document.getElementById('release_date').textContent = movie.release_date;
     document.getElementById('duration').textContent = movie.duration;
     document.getElementById('country').textContent = movie.country;
     document.getElementById('language').textContent = movie.language;
+    // document.getElementById('caption').textContent = movie.caption;
     document.getElementById('synopsis').textContent = movie.synopsis;
 }
 

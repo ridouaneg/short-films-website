@@ -8,12 +8,58 @@
 </head>
 <body>
     <h1>Short Film Dataset</h1>
+
+    <!-- Search and Filters Container -->
+    <div class="controls">
+        <!-- Search Bar -->
+        <!-- <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search by title, director, or actors...">
+            <button id="search-button">Search</button>
+            <button id="clear-search-button">Clear</button>
+        </div> -->
+
+        <!-- Filters -->
+        <div class="filters">
+            <label for="country-filter">Country:</label>
+            <select id="country-filter">
+                <option value="">All</option>
+                <!-- Country options will be populated dynamically -->
+            </select>
+
+            <label for="language-filter">Language:</label>
+            <select id="language-filter">
+                <option value="">All</option>
+                <!-- Language options will be populated dynamically -->
+            </select>
+        </div>
+
+        <!-- Sorting -->
+        <div class="sorting">
+            <label for="sort-options">Sort By:</label>
+            <select id="sort-options">
+                <option value="">None</option>
+                <option value="title-asc">Title (A-Z)</option>
+                <option value="title-desc">Title (Z-A)</option>
+                <option value="release_date-asc">Release Date (Oldest First)</option>
+                <option value="release_date-desc">Release Date (Newest First)</option>
+                <option value="duration-asc">Duration (Shortest First)</option>
+                <option value="duration-desc">Duration (Longest First)</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Movie Grid -->
     <div id="movie-grid" class="grid-container">
         <!-- Movie thumbnails will be injected here -->
     </div>
+
+    <!-- Pagination Controls -->
     <div id="pagination" class="pagination">
-        <!-- Pagination controls will be injected here -->
+        <!-- Pagination buttons will be injected here -->
     </div>
+
+    <!-- Loading Indicator -->
+    <div id="loading" class="loading">Loading movies...</div>
 
     <script src="js/main.js"></script>
 </body>

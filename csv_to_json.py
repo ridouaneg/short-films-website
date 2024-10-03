@@ -21,11 +21,11 @@ def csv_to_json(csv_file_path, json_file_path):
             # Convert fields to appropriate data types
             try:
                 movie = {
-                    "id": int(row["id"]),
+                    "id": row["id"],
                     "title": row["title"],
-                    "director": row["director"],
-                    "actors": [actor.strip() for actor in row["actors"].split('|')],  # Convert to list
-                    "duration": int(row["duration"]),
+                    #"director": row["director"],
+                    #"actors": [actor.strip() for actor in row["actors"].split('|')],  # Convert to list
+                    "duration": int(float(row["duration"])),
                     "country": row["country"],
                     "language": row["language"],
                     "synopsis": row["synopsis"],
