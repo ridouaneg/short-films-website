@@ -1,0 +1,4 @@
+id,title,director,actors,duration,country,language,synopsis,youtube_url,thumbnail_url,release_date
+1,The First Film,Jane Doe,Actor A|Actor B,12,USA,English,"A short synopsis here.","https://youtu.be/example1","https://example.com/thumb1.jpg","2023-01-15"
+2,Another Story,John Smith,Actor C|Actor D,10,Canada,French,"Another synopsis here.","https://youtu.be/example2","https://example.com/thumb2.jpg","2023-02-20"
+1000,The Last Film,Alice Johnson,Actor X|Actor Y,15,UK,English,"Final synopsis here.","https://youtu.be/example1000","https://example.com/thumb1000.jpg","2024-10-03"

@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "title": "The First Film",
+        "director": "Jane Doe",
+        "actors": [
+            "Actor A",
+            "Actor B"
+        ],
+        "duration": 12,
+        "country": "USA",
+        "language": "English",
+        "synopsis": "A short synopsis here.",
+        "youtube_url": "https://youtu.be/example1",
+        "thumbnail_url": "https://example.com/thumb1.jpg",
+        "release_date": "2023-01-15"
+    },
+    {
+        "id": 2,
+        "title": "Another Story",
+        "director": "John Smith",
+        "actors": [
+            "Actor C",
+            "Actor D"
+        ],
+        "duration": 10,
+        "country": "Canada",
+        "language": "French",
+        "synopsis": "Another synopsis here.",
+        "youtube_url": "https://youtu.be/example2",
+        "thumbnail_url": "https://example.com/thumb2.jpg",
+        "release_date": "2023-02-20"
+    },
+    {
+        "id": 1000,
+        "title": "The Last Film",
+        "director": "Alice Johnson",
+        "actors": [
+            "Actor X",
+            "Actor Y"
+        ],
+        "duration": 15,
+        "country": "UK",
+        "language": "English",
+        "synopsis": "Final synopsis here.",
+        "youtube_url": "https://youtu.be/example1000",
+        "thumbnail_url": "https://example.com/thumb1000.jpg",
+        "release_date": "2024-10-03"
+    }
+]
