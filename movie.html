@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Details</title>
+    <title>Movie Annotation</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -13,15 +13,51 @@
         <!-- YouTube video will be embedded here -->
     </div>
     <div id="movie-details">
-        <!-- <p><strong>Director:</strong> <span id="director"></span></p> -->
-        <!-- <p><strong>Actors:</strong> <span id="actors"></span></p> -->
         <p><strong>Release Date:</strong> <span id="release_date"></span></p>
         <p><strong>Duration:</strong> <span id="duration"></span> seconds</p>
         <p><strong>Country:</strong> <span id="country"></span></p>
         <p><strong>Language:</strong> <span id="language"></span></p>
-        <!-- <p><strong>Caption:</strong> <span id="caption"></span></p> -->
+        <p><strong>Caption:</strong> <span id="caption"></span></p>
         <p><strong>Synopsis:</strong> <span id="synopsis"></span></p>
     </div>
+
+    <!-- Questions and Answers Section -->
+    <div id="qa-container">
+        <h2>Questions and Answers</h2>
+        <ul id="qa-list">
+            <!-- Questions and answers will be populated here via JavaScript -->
+        </ul>
+    </div>
+
+    <!-- Movie Annotation Form -->
+    <h2>Annotate the Movie</h2>
+    <form id="annotation-form">
+        <label for="main_characters">Main Characters:</label><br>
+        <textarea id="main_characters" name="main_characters" rows="3"></textarea><br><br>
+
+        <label for="setting">Setting (Time and Place):</label><br>
+        <textarea id="setting" name="setting" rows="3"></textarea><br><br>
+
+        <label for="plot">Plot (Conflict and Resolution):</label><br>
+        <textarea id="plot" name="plot" rows="4"></textarea><br><br>
+
+        <label for="key_events">Key Sequence of Events:</label><br>
+        <textarea id="key_events" name="key_events" rows="4"></textarea><br><br>
+
+        <label for="plot_twist">Final Plot Twist:</label><br>
+        <textarea id="plot_twist" name="plot_twist" rows="3"></textarea><br><br>
+
+        <label for="genre">Genre:</label><br>
+        <input type="text" id="genre" name="genre"><br><br>
+
+        <label for="style">Style:</label><br>
+        <input type="text" id="style" name="style"><br><br>
+
+        <label for="theme">Theme:</label><br>
+        <input type="text" id="theme" name="theme"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
 
     <script src="js/movie.js"></script>
 </body>

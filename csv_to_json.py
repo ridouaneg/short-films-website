@@ -23,15 +23,14 @@ def csv_to_json(csv_file_path, json_file_path):
                 movie = {
                     "id": row["id"],
                     "title": row["title"],
-                    #"director": row["director"],
-                    #"actors": [actor.strip() for actor in row["actors"].split('|')],  # Convert to list
                     "duration": int(float(row["duration"])),
                     "country": row["country"],
                     "language": row["language"],
+                    "caption": row["caption"],
                     "synopsis": row["synopsis"],
                     "youtube_url": row["youtube_url"],
                     "thumbnail_url": row["thumbnail_url"],
-                    "release_date": row["release_date"]  # Consider converting to date object if needed
+                    "release_date": row["release_date"],
                 }
                 data.append(movie)
             except ValueError as ve:
